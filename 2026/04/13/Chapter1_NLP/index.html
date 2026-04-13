@@ -20,27 +20,26 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="从基础 AI 能力接入的 Demo，进阶打造具备完整链路、贴近真实产品体验的 AI 产品原型，掌握产品级原型开发的核心思路与实操方法。">
+    <meta name="description" content="概要：比较系统地学习了NLP的相关基础概念、主要任务以及其部分原理。比较有收获的一点是学习到计算机是通过词向量的方式处理自然语言的，向量的不同维度代表不同的特征项，元素值代表特征项的权重。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="1-4-project_practice">
-<meta property="og:url" content="http://example.com/2026/02/24/1-4-project-practice/index.html">
+<meta property="og:title" content="Chapter1 NLP">
+<meta property="og:url" content="http://example.com/2026/04/13/Chapter1_NLP/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="从基础 AI 能力接入的 Demo，进阶打造具备完整链路、贴近真实产品体验的 AI 产品原型，掌握产品级原型开发的核心思路与实操方法。">
+<meta property="og:description" content="概要：比较系统地学习了NLP的相关基础概念、主要任务以及其部分原理。比较有收获的一点是学习到计算机是通过词向量的方式处理自然语言的，向量的不同维度代表不同的特征项，元素值代表特征项的权重。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2026-02-24T15:59:27.000Z">
-<meta property="article:modified_time" content="2026-02-24T16:15:04.633Z">
+<meta property="article:published_time" content="2026-04-13T08:40:00.000Z">
+<meta property="article:modified_time" content="2026-04-13T10:21:57.063Z">
 <meta property="article:author" content="Nelly">
-<meta property="article:tag" content="easy-vibe">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/2026/02/24/1-4-project-practice/">
+<link rel="canonical" href="http://example.com/2026/04/13/Chapter1_NLP/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2026/02/24/1-4-project-practice/","path":"2026/02/24/1-4-project-practice/","title":"1-4-project_practice"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2026/04/13/Chapter1_NLP/","path":"2026/04/13/Chapter1_NLP/","title":"Chapter1 NLP"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>1-4-project_practice | Hexo</title>
+<title>Chapter1 NLP | Hexo</title>
   
 
 
@@ -129,7 +128,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E5%AE%8C%E5%96%84%E4%BA%A7%E5%93%81%E6%A0%B8%E5%BF%83%E9%93%BE%E8%B7%AF%EF%BC%8C%E6%8B%92%E7%BB%9D%E5%8D%95%E4%B8%80-%E2%80%9CHappy-Path%E2%80%9D"><span class="nav-number">1.</span> <span class="nav-text">（一）完善产品核心链路，拒绝单一 “Happy Path”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E6%B3%A8%E5%85%A5%E4%BA%A7%E5%93%81-%E2%80%9C%E7%81%B5%E9%AD%82%E2%80%9D%EF%BC%8C%E6%A8%A1%E6%8B%9F%E7%9C%9F%E5%AE%9E%E8%BF%90%E8%90%A5%E7%8A%B6%E6%80%81"><span class="nav-number">2.</span> <span class="nav-text">（二）注入产品 “灵魂”，模拟真实运营状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E6%80%BB%E7%BB%93%E6%94%B6%E8%8E%B7"><span class="nav-number">3.</span> <span class="nav-text">（三）总结收获</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter1-NLP"><span class="nav-number">1.</span> <span class="nav-text">Chapter1 NLP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#NLP"><span class="nav-number">1.1.</span> <span class="nav-text">NLP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E8%A1%A8%E7%A4%BA%E7%9A%84%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B"><span class="nav-number">1.2.</span> <span class="nav-text">文本表示的发展历程</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -180,7 +179,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2026/02/24/1-4-project-practice/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/04/13/Chapter1_NLP/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -193,12 +192,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="1-4-project_practice | Hexo">
+      <meta itemprop="name" content="Chapter1 NLP | Hexo">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          1-4-project_practice
+          Chapter1 NLP
         </h1>
 
         <div class="post-meta-container">
@@ -208,15 +207,18 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2026-02-24 23:59:27" itemprop="dateCreated datePublished" datetime="2026-02-24T23:59:27+08:00">2026-02-24</time>
+      <time title="Created: 2026-04-13 16:40:00 / Modified: 18:21:57" itemprop="dateCreated datePublished" datetime="2026-04-13T16:40:00+08:00">2026-04-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
+        <i class="far fa-folder"></i>
       </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-02-25 00:15:04" itemprop="dateModified" datetime="2026-02-25T00:15:04+08:00">2026-02-25</time>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/happy-llm/" itemprop="url" rel="index"><span itemprop="name">happy-llm</span></a>
+        </span>
     </span>
 
   
@@ -228,30 +230,37 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>从基础 AI 能力接入的 Demo，进阶打造具备完整链路、贴近真实产品体验的 AI 产品原型，掌握产品级原型开发的核心思路与实操方法。</p>
+    <div class="post-body" itemprop="articleBody"><p><strong>概要</strong>：比较系统地学习了NLP的相关基础概念、主要任务以及其部分原理。比较有收获的一点是学习到计算机是通过<strong>词向量</strong>的方式处理自然语言的，向量的不同维度代表不同的特征项，元素值代表特征项的权重。</p>
 <span id="more"></span>
 
-<h2 id="（一）完善产品核心链路，拒绝单一-“Happy-Path”"><a href="#（一）完善产品核心链路，拒绝单一-“Happy-Path”" class="headerlink" title="（一）完善产品核心链路，拒绝单一 “Happy Path”"></a>（一）完善产品核心链路，拒绝单一 “Happy Path”</h2><p>核心原则：产品开发不能仅考虑「用户操作→API 响应成功→功能实现」的理想路径，需覆盖<strong>等待、成功、失败、异常</strong>全场景，保障用户操作的每一步都有反馈、有处理。</p>
+
+
+<h1 id="Chapter1-NLP"><a href="#Chapter1-NLP" class="headerlink" title="Chapter1 NLP"></a>Chapter1 NLP</h1><h2 id="NLP"><a href="#NLP" class="headerlink" title="NLP"></a>NLP</h2><ul>
+<li><strong>概念</strong>：NLP 是 一种让计算机理解、解释和生成人类语言的技术</li>
+<li><strong>NLP任务</strong><ul>
+<li><strong>中文分词</strong>   正确的分词结果对于后续的词性标注、实体识别、句法分析等任务至关重要</li>
+<li><strong>子词切分</strong> 一种常见的<strong>文本预处理技术</strong>，旨在将词汇进一步分解为更小的单位，即子词。子词切分特别适用于处理&#x3D;&#x3D;词汇稀疏问题&#x3D;&#x3D;，即当遇到罕见词或未见过的新词时，能够通过已知的子词单位来理解或生成这些词汇</li>
+<li><strong>词性标注</strong> 为文本中的每个单词分配一个词性标签。词性标注通常依赖于机器学习模型，这些模型通过学习大量的标注数据来预测新句子中每个单词的词性。</li>
+<li><strong>文本分类</strong>  是 NLP 领域的一项核心任务，涉及到将给定的文本自动分配到一个或多个预定义的类别中。文本分类的关键在于理解文本的含义和上下文，并基于此将文本映射到特定的类别。</li>
+<li><strong>实体识别</strong> 自动识别文本中具有特定意义的实体，实体识别任务对于&#x3D;&#x3D;信息提取、知识图谱构建、问答系统、内容推荐&#x3D;&#x3D;等应用很重要，它能够帮助系统理解文本中的关键元素及其属性。</li>
+<li><strong>关系抽取</strong>  从文本中识别实体之间的语义关系,关系抽取对于理解&#x3D;&#x3D;文本内容、构建知识图谱、提升机器理解语言的能力&#x3D;&#x3D;等方面具有重要意义。</li>
+<li><strong>文本摘要</strong> 生成一段简洁准确的摘要，来概括原文的主要内容.分为 <strong>抽取式摘要</strong>和<strong>生成式摘要</strong>两大类</li>
+<li><strong>机器翻译</strong>  机器翻译不仅涉及到词汇的直接转换，更重要的是要准确传达源语言文本的语义、风格和文化背景等</li>
+<li><strong>自动问答</strong>  自动问答系统的构建涉及多个NLP子任务，如信息检索、文本理解、知识表示和推理等。分为<strong>检索式问答</strong>，<strong>知识库问答</strong>，<strong>社区问答</strong>三大类</li>
+</ul>
+</li>
+</ul>
+<h2 id="文本表示的发展历程"><a href="#文本表示的发展历程" class="headerlink" title="文本表示的发展历程"></a>文本表示的发展历程</h2><p>目的是将人类语言的自然形式转化为计算机可以处理的形式 (文本数字化)。在 NLP 中，文本表示涉及到将文本中的语言单位（如字、词、短语、句子等）以及它们之间的关系和结构信息转换为计算机能够理解和操作的形式（如向量、矩阵或其他数据结构）</p>
 <ul>
-<li><p>增加等待与实时反馈</p>
+<li><p><strong>词向量</strong>  向量空间模型用于文本相似度计算、文本分类、信息检索等自然语言处理任务。它将复杂的文本数据转换为易于计算和分析的数学形式，使得文本的相似度计算和模式识别成为可能。但存在<strong>数据稀疏性</strong>和<strong>维数灾难</strong>问题</p>
 </li>
-<li><p>实现对话历史持久化</p>
+<li><p><strong>语言模型</strong>  N-gram—-一种基于统计的语言模型，核心思想是基于马尔可夫假设，即一个词的出现概率仅依赖于它前面的N-1个词。通过条件概率链式规则来估计整个句子的概率</p>
 </li>
-<li><p>处理失败与异常场景</p>
+<li><p><strong>Word2Vec</strong>  学习词与词之间的&#x3D;&#x3D;上下文关系&#x3D;&#x3D;来生成词的密集向量表示，使得语义相关的词在向量空间中距离较近</p>
 </li>
-</ul>
-<h2 id="（二）注入产品-“灵魂”，模拟真实运营状态"><a href="#（二）注入产品-“灵魂”，模拟真实运营状态" class="headerlink" title="（二）注入产品 “灵魂”，模拟真实运营状态"></a>（二）注入产品 “灵魂”，模拟真实运营状态</h2><ul>
-<li><p>AI 辅助设计业务数据结构</p>
-</li>
-<li><p>AI批量生成Mock Data</p>
-</li>
-<li><p>结合LocalStorage实现“假增删改“</p>
+<li><p><strong>ELMo</strong> 预训练+特定任务中微调。能够捕捉到词汇的多义性和上下文信息。</p>
 </li>
 </ul>
-<h2 id="（三）总结收获"><a href="#（三）总结收获" class="headerlink" title="（三）总结收获"></a>（三）总结收获</h2><p><strong>思维层面</strong>：建立<strong>产品级原型开发思维</strong>，从 “只关注功能实现” 转变为 “以用户体验为核心，考虑全场景、全链路”，理解 Demo 与实际产品的核心差距；</p>
-<p><strong>技术层面</strong>：掌握前端开发中<strong>状态管理、异常处理、本地存储（LocalStorage）</strong> 等工程化实操能力，能独立解决原型开发中的常见问题；</p>
-<p><strong>落地层面</strong>：学会借助 AI 工具提升开发效率（AI 设计数据结构、批量造数、AI IDE 优化），掌握 “场景构思→功能开发→测试迭代→产品交付” 的完整原型开发流程；</p>
-<p><strong>能力成果</strong>：完成本次学习及大作业后，可独立开发并交付一个<strong>可展示、可演示、可交互</strong>的 AI 应用原型，为后续全栈开发打下基础。</p>
 
     </div>
 
@@ -260,22 +269,16 @@
     
 
     <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/easy-vibe/" rel="tag"># easy-vibe</a>
-          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2026/02/20/1-3-Integrating-AI-Notes/" rel="prev" title="1.3_Integrating_AI_Notes">
-                  <i class="fa fa-angle-left"></i> 1.3_Integrating_AI_Notes
+                <a href="/2026/02/24/1-4-project-practice/" rel="prev" title="1-4-project_practice">
+                  <i class="fa fa-angle-left"></i> 1-4-project_practice
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2026/04/13/Chapter1_NLP/" rel="next" title="Chapter1 NLP">
-                  Chapter1 NLP <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
